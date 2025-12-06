@@ -1,0 +1,38 @@
+config of measurements N_g min:
+conf.f_s     = 48000;   % sampling rate
+conf.f_sym   = 100;     % symbol rate
+conf.nframes = 1;       % number of frames to transmit
+% conf.nbits   = 2000;    % number of bits
+conf.n_ofdm_symbols = 100;
+conf.modulation_order = 2; % BPSK:1, QPSK:2
+conf.f_c     = 4000;
+conf.n_carriers = 256;
+conf.f_spacing = 5;
+conf.pilot_frequency = 0;
+
+conf.npreamble  = 100;
+conf.bitsps     = 16;   % bits per audio sample
+conf.offset     = 0;
+
+computation of N_g min pour cavity: ~ 45 (début des erreurs)
+computation of N_g min pour interior(sol): ~ 35 (début des erreurs)
+computation of N_g min pour exterior: ~ 10 (début des erreurs)
+
+
+config measurements pdp et channels
+conf.n_channel_training = 1000;
+
+
+moving every 5s:
+- no phase tracking: ber = 0.5 -> random
+- with phase tracking every symbol: ber = 0.0838
+- with phase tracking every 2 symbol: ber = 0.1267
+- with phase tracking every 4 symbol: ber = 0.1346
+
+17.5cm: 0
+35cm: 0.0154
+52.5cm: 0.0839
+70cm: 0.0540
+87.5
+105cm:
+140cm:
